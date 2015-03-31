@@ -77,11 +77,11 @@ TODO
 
     function line(axis, p, d) {
       var l = document.createElement('line');
-      var extent = (axis === 'left' ? 'width' : 
+      var extent = (axis === 'left' ? 'width' :
         (axis === 'top' ? 'height' : axis));
       l.setAttribute('extent', extent);
       if (d < 0) {
-        axis = (axis === 'left' ? 'right' : 
+        axis = (axis === 'left' ? 'right' :
           (axis === 'top' ? 'bottom' : axis));
       }
       p = Math.abs(p);
@@ -123,7 +123,7 @@ TODO
         // look at each row to find a containing area
         for (var j=0; j<majCount; j++) {
           // get the row vector
-          var vector = matrix[j]
+          var vector = matrix[j];
           // node index at [i,j]
           var nodei = vector[i];
           // if a node is there
@@ -188,7 +188,7 @@ TODO
 
     function railize(count, sizeFn) {
       //
-      // create rails for `count` tracks using 
+      // create rails for `count` tracks using
       // sizing function `sizeFn(trackNo)`
       //
       // for n tracks there are (n+1) rails
@@ -260,9 +260,9 @@ TODO
     }
 
     function position(elt, left, right, top, bottom) {
-      _position(elt.style, 'top', 'bottom', 'height', rows[top], 
+      _position(elt.style, 'top', 'bottom', 'height', rows[top],
           rows[bottom]);
-      _position(elt.style, 'left', 'right', 'width', columns[left], 
+      _position(elt.style, 'left', 'right', 'width', columns[left],
           columns[right]);
     }
 
@@ -322,11 +322,11 @@ TODO
               node.style[offscreen] = node.offsetWidth * -2 + 'px';
               break;
             case 'right':
-              node.style.left = node.offsetParent.offsetWidth 
+              node.style.left = node.offsetParent.offsetWidth
                   + node.offsetWidth + 'px';
               break;
             case 'bottom':
-              node.style.top = node.parentNode.offsetHeight 
+              node.style.top = node.parentNode.offsetHeight
                   + node.offsetHeight + 'px';
               break;
             default:
